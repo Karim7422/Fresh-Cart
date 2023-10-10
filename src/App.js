@@ -57,9 +57,7 @@ let routes = createHashRouter(
       { path: "/forget-password", element: <ForgetPassword /> },
     ],
   },
-],{
-  basename:"/Fresh-Cart/"
-});
+]);
 
 function App() {
   return (
