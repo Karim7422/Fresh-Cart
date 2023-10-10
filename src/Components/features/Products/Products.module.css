@@ -1,0 +1,24 @@
+.productCard{
+    transition: all 0.3s ;
+    box-shadow: 0 0 5px 2px var(--main-color);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.productCard .addBtn {
+    position: absolute;
+    bottom: -100%;
+    transition: all 0.3s ;
+}
+
+.productCard:hover .addBtn { 
+    bottom: 0;
+}
+
+
+.productCard:hover {
+    box-shadow: 0 0 10px 1px var(--main-color); 
+    scale: 1.02;
+    color: black !important;
+}

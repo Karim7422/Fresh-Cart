@@ -1,0 +1,14 @@
+.categoriesBox{
+    transition: all 0.3s ;
+    box-shadow: 0 0 5px 1px var(--main-color); 
+    overflow: hidden;
+    border-radius: 5px;
+}
+.categoriesBox img{
+    scale: 1.1;
+}
+.categoriesBox:hover{
+    box-shadow: 0 0 15px 1px var(--main-color); 
+    border: none;
+    scale: 1.02;
+}

@@ -1,0 +1,30 @@
+.mainSlider {
+    max-height: 560px;
+}
+
+:global(.swiper .swiper-pagination-bullet) {
+    background-color: var(--main-color);
+
+}
+
+.mainSlider :global(.swiper .swiper-slide) img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categorySlider :global(.swiper) {
+    padding-bottom: 2rem;
+}
+
+.categorySlider :global(.swiper .swiper-slide) {
+    align-self: stretch;
+}
+
+.categorySlider :global(.swiper .swiper-slide)>div {
+    display: flex;
+}
+
+.categorySlider :global(.swiper .swiper-slide) img {
+    height: 300px;
+}

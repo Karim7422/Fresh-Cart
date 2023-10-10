@@ -1,0 +1,10 @@
+button.button svg,
+a.button svg {
+    color: white;
+}
+
+.button:hover {
+    background-color: white !important;
+    color: var(--main-color) !important;
+    box-shadow: 0 0 0 1px var(--main-color);
+}
