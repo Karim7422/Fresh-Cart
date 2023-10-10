@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/Fresh-Cart/static/css/main.5fd14314.css",
+    "main.js": "/Fresh-Cart/static/js/main.57a35a98.js",
+    "static/media/blog1.png": "/Fresh-Cart/static/media/blog1.d84941d5f1b53e510ac0.png",
+    "static/media/purepng.com-mastercard-logologobrand-logoiconslogos-251519938372dnf77.png": "/Fresh-Cart/static/media/purepng.com-mastercard-logologobrand-logoiconslogos-251519938372dnf77.67930762c0d43ceccec1.png",
+    "static/media/fa-solid-900.ttf": "/Fresh-Cart/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/slider-image-1.jpeg": "/Fresh-Cart/static/media/slider-image-1.3c3940ee0f1c3b17ff9a.jpeg",
+    "static/media/fa-brands-400.ttf": "/Fresh-Cart/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/slider-image-3.jpeg": "/Fresh-Cart/static/media/slider-image-3.7e5c9f7a513f6db6dd5e.jpeg",
+    "static/media/slider-image-2.jpeg": "/Fresh-Cart/static/media/slider-image-2.e510b0de8a4d96a1d5ad.jpeg",
+    "static/media/fa-solid-900.woff2": "/Fresh-Cart/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/Home.png": "/Fresh-Cart/static/media/Home.d602c130be5917aa31e6.png",
+    "static/media/Men.jpg": "/Fresh-Cart/static/media/Men.2ee08c92f07df7ea0602.jpg",
+    "static/media/fa-brands-400.woff2": "/Fresh-Cart/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/error.svg": "/Fresh-Cart/static/media/error.084f5f5b0eb10d3216cb7c939108e1f6.svg",
+    "static/media/Health-And-Beauty.jpg": "/Fresh-Cart/static/media/Health-And-Beauty.1f92506f46c0bb5fedb0.jpg",
+    "static/media/2560px-Amazon_Pay_logo.svg.png": "/Fresh-Cart/static/media/2560px-Amazon_Pay_logo.svg.c4d487409b11398f7dac.png",
+    "static/media/Mobiles.jpg": "/Fresh-Cart/static/media/Mobiles.1b34c54dda5f1d4037a0.jpg",
+    "static/media/PayPal.svg.png": "/Fresh-Cart/static/media/PayPal.svg.5fc8e5b7a2c43be4d906.png",
+    "static/media/women.jpg": "/Fresh-Cart/static/media/women.6694f62be99375b20279.jpg",
+    "static/media/fa-regular-400.ttf": "/Fresh-Cart/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/Electronics.png": "/Fresh-Cart/static/media/Electronics.2175db155512e39486d8.png",
+    "static/media/baby and toys.jpg": "/Fresh-Cart/static/media/baby and toys.8d5c87f0388117563d0a.jpg",
+    "static/media/American-Express-Logo-PNG-File.png": "/Fresh-Cart/static/media/American-Express-Logo-PNG-File.270c21ed1df79c91fab4.png",
+    "static/media/blog2.jpg": "/Fresh-Cart/static/media/blog2.5ac2741ac9e78aa80e99.jpg",
+    "static/media/fa-regular-400.woff2": "/Fresh-Cart/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/App Store.png": "/Fresh-Cart/static/media/App Store.dddc1e69970ed35d4773.png",
+    "static/media/Google Play.png": "/Fresh-Cart/static/media/Google Play.1d1fa53d3b627111df2c.png",
+    "static/media/freshcart-logo.svg": "/Fresh-Cart/static/media/freshcart-logo.53f7a424c3aedc30a0fb46dc2278137c.svg",
+    "static/media/fa-v4compatibility.ttf": "/Fresh-Cart/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Fresh-Cart/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/Fresh-Cart/index.html",
+    "main.5fd14314.css.map": "/Fresh-Cart/static/css/main.5fd14314.css.map",
+    "main.57a35a98.js.map": "/Fresh-Cart/static/js/main.57a35a98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fd14314.css",
+    "static/js/main.57a35a98.js"
+  ]
+}
