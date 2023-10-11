@@ -25,7 +25,7 @@ export default function Register() {
   const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
   const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
   const regexPhone = /^\+?[1-9]\d{1,14}$/;
-  let validationSchema = Yup.object({
+  const validationSchema = Yup.object({
     name: Yup.string()
       .min(3, "Your name must be at least 3 characters")
       .max(30, "Your name can't exceed 30 characters")
@@ -49,7 +49,7 @@ export default function Register() {
       .oneOf([Yup.ref("password")], "Password And Re-Password Doesn't Match")
       .required("Re-Password Is Required"),
   });
-  let formik = useFormik({
+  const formik = useFormik({
     initialValues: {
       name: "",
       phone: "",
@@ -62,7 +62,7 @@ export default function Register() {
   });
   return (
     <>
-      <div className="w-50 m-auto bg-main-light p-5 mt-4">
+      <div style={{maxWidth:"400px"}} className=" m-auto bg-main-light p-5 rounded-3 mt-4">
         <h3 className="text-center fw-bold">Register Now</h3>
         <form onSubmit={formik.handleSubmit}>
           <label className="fw-bolder" htmlFor="name">Name </label>

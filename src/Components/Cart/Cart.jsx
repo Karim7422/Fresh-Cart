@@ -29,11 +29,11 @@ export default function Cart() {
             <CartItem cartItem={product} key={product._id} />
           ))}
           <div className="d-flex gap-3 justify-content-center mt-3">
-            <button className="btn btn-danger" onClick={() => resetCart()}>
+            <button className="btn btn-danger " onClick={() => resetCart()}>
               {" "}
               Reset Cart
             </button>
-            <Button type="link" to="checkout">
+            <Button moreClasses={`d-flex align-items-center`} type="link" to="checkout">
               Make Purchase
             </Button>
           </div>

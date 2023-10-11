@@ -3,30 +3,52 @@ import ProductsItem from "../Products/ProductItem"
 import { CartContext } from "../../../context/CartContext";
 import toast from "react-hot-toast";
 import { WishListContext } from "../../../context/WishListContext";
+import { UserContext } from "../../../context/UserContext";
 export default function ProductsList({ products }) {
   const { addToCart } = useContext(CartContext);
   const { addToWishList, getUserWishList, wishList, removeFromWishList } = useContext(WishListContext);
+  const { userToken} = useContext(UserContext)
   async function handleAddToCart(e, productId) {
     e.preventDefault();
     await addToCart(productId);
-    toast.success("Product Added To Cart", {
-      style: {
-        boxShadow: "0 0 0 1px  var(--main-color)",
-        fontWeight: "bolder",
-        color: "var(--main-color)",
-      },
-    });
+    if(userToken){
+      toast.success("Product Added To Cart", {
+        style: {
+          boxShadow: "0 0 0 1px  var(--main-color)",
+          fontWeight: "bolder",
+          color: "var(--main-color)",
+        },
+      });
+    }else{
+      toast.error("You Must Login First", {
+        style: {
+          boxShadow: "0 0 0 1px  red",
+          fontWeight: "bolder",
+          color: "red",
+        },
+      });
+    }
   }
   function handleAddToWish(e, productId) {
     e.preventDefault();
     addToWishList(productId);
-    toast.success("Product Added To WishList", {
-      style: {
-        boxShadow: "0 0 0 1px  var(--main-color)",
-        fontWeight: "bolder",
-        color: "var(--main-color)",
-      },
-    });
+    if(userToken){
+      toast.success("Product Added To WishList", {
+        style: {
+          boxShadow: "0 0 0 1px  var(--main-color)",
+          fontWeight: "bolder",
+          color: "var(--main-color)",
+        },
+      });
+    }else{
+      toast.error("You Must Login First", {
+        style: {
+          boxShadow: "0 0 0 1px  red",
+          fontWeight: "bolder",
+          color: "red",
+        },
+      });
+    }
   }
   function handleRemoveFromWish(e, productId) {
     e.preventDefault();

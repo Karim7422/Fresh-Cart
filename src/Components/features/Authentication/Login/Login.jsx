@@ -52,7 +52,7 @@ export default function Login() {
   });
   return (
     <>
-      <div className="w-50 m-auto bg-main-light p-5 mt-4 ">
+      <div style={{maxWidth:"400px"}} className=" m-auto bg-main-light p-4 mt-4 rounded-3">
         <h3 className="text-center fw-bold">Login</h3>
         <form onSubmit={formik.handleSubmit}>
           <label className="fw-bold" htmlFor="email">Email </label>
@@ -118,7 +118,7 @@ export default function Login() {
                 </button>
               </div>
             ) : (
-              <div className="d-flex flex-column">
+              <div className="d-flex flex-column ">
                 <Button
                   disabled={!formik.isValid || !formik.dirty}
                   type="submit"
@@ -133,11 +133,11 @@ export default function Login() {
                     >
                       Forgot Your Password?
                     </Link>                 
-                  <div>
+                  <div className="d-flex justify-content-center align-items-center flex-column">
                     <span className="fw-semibold">Don't have an account? </span>
                     <Link
                       to="/register"
-                      className=" text-main fw-semibold text-decoration-none"
+                      className=" text-main fw-semibold  text-decoration-none"
                     >
                       Sign Up
                     </Link>
