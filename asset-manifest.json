@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Fresh-Cart/static/css/main.691cec4f.css",
-    "main.js": "/Fresh-Cart/static/js/main.7e5fc50b.js",
+    "main.js": "/Fresh-Cart/static/js/main.f35098f1.js",
     "static/media/blog1.png": "/Fresh-Cart/static/media/blog1.d84941d5f1b53e510ac0.png",
     "static/media/purepng.com-mastercard-logologobrand-logoiconslogos-251519938372dnf77.png": "/Fresh-Cart/static/media/purepng.com-mastercard-logologobrand-logoiconslogos-251519938372dnf77.67930762c0d43ceccec1.png",
     "static/media/fa-solid-900.ttf": "/Fresh-Cart/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
@@ -32,10 +32,10 @@
     "static/media/fa-v4compatibility.woff2": "/Fresh-Cart/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/Fresh-Cart/index.html",
     "main.691cec4f.css.map": "/Fresh-Cart/static/css/main.691cec4f.css.map",
-    "main.7e5fc50b.js.map": "/Fresh-Cart/static/js/main.7e5fc50b.js.map"
+    "main.f35098f1.js.map": "/Fresh-Cart/static/js/main.f35098f1.js.map"
   },
   "entrypoints": [
     "static/css/main.691cec4f.css",
-    "static/js/main.7e5fc50b.js"
+    "static/js/main.f35098f1.js"
   ]
 }
