@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import Button from "../../../ui/Button/Button";
+import { UserContext } from "../../../../context/UserContext";
+
 export default function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const {setUserToken} = useContext(UserContext)
+ 
   async function submitRegister(values) {
     setIsLoading(true);
     const { data } = await axios
@@ -19,7 +23,9 @@ export default function Register() {
       });
     if (data.message === "success") {
       setIsLoading(false);
-      navigate("/login");
+      localStorage.setItem("userToken", data.token);
+      setUserToken(data.token);
+      navigate("/");
     }
   }
   const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
@@ -205,6 +211,7 @@ export default function Register() {
           <p className=" text-danger text-center fw-bolder mt-3">{error}</p>
         )}
       </div>
+     
     </>
   );
 }
