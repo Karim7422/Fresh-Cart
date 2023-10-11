@@ -1,10 +1,7 @@
-
 import styles from "../Products/Products.module.css";
 import { Link } from "react-router-dom";
 import { AiFillHeart, AiFillStar, AiOutlineHeart } from "react-icons/ai";
-
 import Button from "../../ui/Button/Button";
-
 export default function ProductItem({
     product,
     handleAddToWish,
@@ -12,7 +9,6 @@ export default function ProductItem({
     handleAddToCart,
     wishList
 }) {
-
     const inWishlist = wishList?.data?.data.find((el) => el._id === product._id) ? true : false;
     return (
         <div>
@@ -45,10 +41,8 @@ export default function ProductItem({
                             <span className="fw-bold">{product.price}EGP</span>
                             <span className="fw-bold " style={{ fontSize: "0.9rem" }}>
                                 <AiFillStar className="rating-color" />
-
                                 {product.ratingsAverage}
                             </span>
-
                             <div onClick={(e) => (inWishlist ? handleRemoveFromWish(e, product._id) : handleAddToWish(e, product._id))}>
                                 <button className="btn">{inWishlist ? <AiFillHeart /> : <AiOutlineHeart />}</button>
                             </div>

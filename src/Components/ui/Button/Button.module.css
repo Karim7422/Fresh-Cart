@@ -2,7 +2,6 @@ button.button svg,
 a.button svg {
     color: white;
 }
-
 .button:hover {
     background-color: white !important;
     color: var(--main-color) !important;

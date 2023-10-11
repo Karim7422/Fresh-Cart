@@ -1,21 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styles from '../Brands/Brands.module.css'
-
+import Spinner from '../ui/Spinner/Spinner';
 export default function Brands() {
   const [bands, setBrands] = useState([])
-
+  const [loading , setLoading] = useState(false)
   async function getBrands() {
     try {
+      setLoading(true)
       const res = await axios.get("https://ecommerce.routemisr.com/api/v1/brands")
       setBrands(res)
     } catch (error) {
+    }finally{
+      setLoading(false)
     }
   }
   useEffect(() => {
     getBrands()
   }, [])
-  
   return (
     <section className='mt-5'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-5'>
@@ -28,5 +30,6 @@ export default function Brands() {
           </div>
         )}
       </div>
+      {loading && <Spinner/>}
     </section>)
 }

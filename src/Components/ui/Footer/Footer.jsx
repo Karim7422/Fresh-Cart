@@ -25,7 +25,7 @@ export default function Footer() {
                         type="email"
                         placeholder="Enter Your Email ... "
                     />
-                  <Button>Share App Link</Button>
+                    <Button>Share App Link</Button>
                 </div>
                 <div className=" gap-5 gap-md-3 flex-wrap  d-flex justify-content-between align-items-center">
                     <div

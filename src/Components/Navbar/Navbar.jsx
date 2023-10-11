@@ -5,7 +5,6 @@ import logo from "../../Assets/images/freshcart-logo.svg";
 import { UserContext } from "../../context/UserContext";
 import { FaShoppingCart } from "react-icons/fa";
 import { CartContext } from "../../context/CartContext";
-
 export default function Navbar() {
   const { userToken, setUserToken } = useContext(UserContext);
   const navigate = useNavigate();

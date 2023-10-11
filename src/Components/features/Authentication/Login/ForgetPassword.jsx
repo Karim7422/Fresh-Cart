@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import Button from "../../../ui/Button/Button";
 import { UserContext } from "../../../../context/UserContext";
+import Spinner from "../../../ui/Spinner/Spinner"
 export default function ForgetPassword() {
-    const { forgotPassword, confirmResetCode, resetPassword } =
+    const { forgotPassword, confirmResetCode, resetPassword,loading } =
         useContext(UserContext);
     const [message, setMessage] = useState(null);
     const [email, setEmail] = useState("");
-
     async function handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -21,14 +21,14 @@ export default function ForgetPassword() {
         setMessage(res);
     }
     return (
-        <section className="w-50 m-auto ">
+        <section className="w-50 m-auto bg-main-light p-5 mt-4">
             <h3 className="text-center fw-bold">Forget Password</h3>
             <form onSubmit={handleSubmit}>
                 {message?.status !== "success" &&
                     message?.data?.response?.data.message !==
                     "Reset code is invalid or has expired" && (
                         <div>
-                            <label htmlFor="email">Enter Your Email</label>
+                            <label className="fw-bold my-2" htmlFor="email">Enter Your Email</label>
                             <input
                                 className="form-control"
                                 name="email"
@@ -41,14 +41,12 @@ export default function ForgetPassword() {
                             />
                         </div>
                     )}
-              
-             
                 {((message?.status === "success" &&
                     message?.data?.data?.message === "Reset code sent to your email") ||
                     message?.data?.response?.data.message ===
                     "Reset code is invalid or has expired") && (
                         <div>
-                            <label htmlFor="resetCode">Enter Reset Code</label>
+                            <label className="fw-bold my-2" htmlFor="resetCode">Enter Reset Code</label>
                             <input
                                 className="form-control"
                                 name="resetCode"
@@ -63,7 +61,7 @@ export default function ForgetPassword() {
                     message?.data?.data?.status === "Success" && (
                         <div>
                             <input type="text" defaultValue={email} name="email" hidden />
-                            <label htmlFor="newPassword">Enter New Password</label>
+                            <label className="fw-bold my-2" htmlFor="newPassword">Enter New Password</label>
                             <input
                                 className="form-control"
                                 name="newPassword"
@@ -79,7 +77,7 @@ export default function ForgetPassword() {
                         {message?.data?.response?.data?.message}
                     </p>
                 ) : (
-                    <p className=" text-main fw-bolder text-center">
+                    <p className=" text-main fw-bolder text-center my-3">
                         {message?.data?.data?.message}
                     </p> 
                 )}
@@ -93,6 +91,7 @@ export default function ForgetPassword() {
                         )}
                 <Button  type="submit">Submit</Button>
             </form>
+            {loading&&<Spinner/>}
         </section>
     );
 }

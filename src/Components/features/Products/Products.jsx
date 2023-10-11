@@ -3,14 +3,11 @@ import { ProductsContext } from "../../../context/ProductsContext";
 import axios from "axios";
 import ProductsList from "./ProductsList";
 import Spinner from "../../ui/Spinner/Spinner";
-
-
 export default function Products() {
   const { products, setProducts } = useContext(ProductsContext);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(null);
   const [searchProduct, setSearchProduct] = useState(products);
-
   function handleChange(e) {
     const data = products.filter((el) =>
       el.title.toLowerCase().includes(e.target.value.toLowerCase())

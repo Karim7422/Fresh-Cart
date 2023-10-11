@@ -28,10 +28,8 @@ export default function UserContextProvider(props) {
       setLoading(false);
     }
   }
-  
   async function resetPassword(formData) {
     try {
-     
       setLoading(true);
       const res = await axios.put(`${BASE_URL}/resetPassword`, {
         email: formData.email,
@@ -44,15 +42,13 @@ export default function UserContextProvider(props) {
       setLoading(false);
     }
   }
-  
   useEffect(() => {
     const token = localStorage.getItem("userToken");
     if (token) setUserToken({ token: token });
   }, []);
-
   return (
     <UserContext.Provider
-      value={{ userToken, setUserToken, forgotPassword, confirmResetCode ,resetPassword}}
+      value={{ userToken,loading, setUserToken, forgotPassword, confirmResetCode, resetPassword }}
     >
       {props.children}
     </UserContext.Provider>

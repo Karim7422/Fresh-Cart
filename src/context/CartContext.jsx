@@ -34,7 +34,6 @@ export default function CartContextProvider({ children }) {
                     token: userToken?.token,
                 },
             });
-       
             setCart(res);
         } catch (error) {
         } finally {

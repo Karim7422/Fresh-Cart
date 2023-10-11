@@ -4,12 +4,10 @@ import MainSlider from "../ui/Slider/MainSlider";
 import blog_img1 from "../../Assets/images/blog1.png";
 import blog_img2 from "../../Assets/images/blog2.jpg";
 import CategorySlider from "../ui/Slider/CategorySlider";
-
 import ProductsList from "../features/Products/ProductsList";
 import { ProductsContext } from "../../context/ProductsContext";
 import axios from "axios";
 import Spinner from "../ui/Spinner/Spinner";
-
 export default function Home() {
   const { products, setProducts } = useContext(ProductsContext);
   const [loading, setLoading] = useState(false);
@@ -31,7 +29,6 @@ export default function Home() {
     if (products.length > 0) return;
     getProducts();
   }, [setProducts, products.length, setLoading]);
-
   const [imgs, setImgs] = useState(true);
   useEffect(() => {
     if (window.innerWidth < 992) {
@@ -79,6 +76,5 @@ export async function loader() {
   const {
     data: { data },
   } = res;
-
   return data;
 }

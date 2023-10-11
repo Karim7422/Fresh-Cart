@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { BsFillTrash3Fill } from 'react-icons/bs'
 import { WishListContext } from '../../context/WishListContext';
-
 export default function WishListItem({ product }) {
     const { removeFromWishList } = useContext(WishListContext);
     function handleRemove(e) {
@@ -38,4 +37,3 @@ export default function WishListItem({ product }) {
         </>
     )
 }
- 

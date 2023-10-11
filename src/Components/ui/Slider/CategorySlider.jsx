@@ -10,22 +10,20 @@ import Men_img from "../../../Assets/images/Categories Slider/Men.jpg";
 import Women_img from "../../../Assets/images/Categories Slider/women.jpg";
 import Home_img from "../../../Assets/images/Categories Slider/Home.png";
 import Beauty_img from "../../../Assets/images/Categories Slider/Health-And-Beauty.jpg";
-import Baby_img from "../../../Assets/images/Categories Slider/baby and toys.jpg"; 
-
+import Baby_img from "../../../Assets/images/Categories Slider/baby and toys.jpg";
 export default function CategorySlider() {
-    const [slides , setSlides]=useState(4)
-
-    useEffect(()=>{
-       if(window.innerWidth > 992){
-        setSlides(4)
-       }else if(window.innerWidth > 768 &&window.innerWidth < 992){
-        setSlides(3)
-       }else if(window.innerWidth <= 768 && window.innerWidth > 425){
-        setSlides(2)
-       }else{
-        setSlides(1)
-       }
-    },[])
+    const [slides, setSlides] = useState(4)
+    useEffect(() => {
+        if (window.innerWidth > 992) {
+            setSlides(4)
+        } else if (window.innerWidth > 768 && window.innerWidth < 992) {
+            setSlides(3)
+        } else if (window.innerWidth <= 768 && window.innerWidth > 425) {
+            setSlides(2)
+        } else {
+            setSlides(1)
+        }
+    }, [])
     return (
         <>
             <h2 className="fw-bolder">Shop Popular Categories</h2>

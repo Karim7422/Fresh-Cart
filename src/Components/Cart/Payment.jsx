@@ -2,17 +2,13 @@ import React, { useContext } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import Button from "../ui/Button/Button";
 import { CartContext } from "../../context/CartContext";
-
 export default function Payment() {
   const { payment, loading } = useContext(CartContext);
-
   async function handlePayment(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     await payment(Object.fromEntries(formData))
-
   }
-  
   return (
     <>
       <div className="w-50 m-auto mt-5 ">
@@ -28,7 +24,6 @@ export default function Payment() {
             placeholder="Enter Your Phone Number"
             aria-label="Phone Number"
           />
-
           <label htmlFor="city" className="visually-hidden">
             City :
           </label>

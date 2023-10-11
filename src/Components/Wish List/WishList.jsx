@@ -9,8 +9,6 @@ export default function WishList() {
             await getUserWishList();
         })();
     }, [getUserWishList]);
-
-
     return (
         <section className="bg-main-light py-3 px-4">
             {loading && <Spinner/>}
@@ -21,7 +19,6 @@ export default function WishList() {
                     <WishListItem product={product} key={product._id} />
                 )}
             </div>
-            
         </section>
     );
 }

@@ -1,22 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import styles from '../Categories/Categories.module.css'
-
+import Spinner from "../ui/Spinner/Spinner"
 export default function Categories() {
   const [categories, setCategories] = useState([])
-
+  const [loading , setLoading] = useState(false)
   async function getCategories() {
     try {
+      setLoading(true)
       const res = await axios.get("https://ecommerce.routemisr.com/api/v1/categories")
       setCategories(res)
     } catch (error) {
-
+    }finally{
+      setLoading(false)
     }
   }
   useEffect(() => {
     getCategories()
   }, [])
-  
   return (
     <section className='mt-5'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5'>
@@ -29,5 +30,6 @@ export default function Categories() {
           </div>
         )}
       </div>
+      {loading && <Spinner/>}
     </section>)
 }

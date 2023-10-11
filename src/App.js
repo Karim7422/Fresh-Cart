@@ -1,5 +1,5 @@
 import "./App.css";
-import { RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Cart from "./Components/Cart/Cart";
 import Brands from "./Components/Brands/Brands";
@@ -23,7 +23,7 @@ import WishList from "./Components/Wish List/WishList";
 import WishListContextProvider from "./context/WishListContext";
 import ForgetPassword from "./Components/features/Authentication/Login/ForgetPassword";
 
-let routes = createHashRouter(
+const routes = createHashRouter(
   [
   {
     path: "/",

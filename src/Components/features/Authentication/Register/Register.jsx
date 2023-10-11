@@ -5,7 +5,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import Button from "../../../ui/Button/Button";
-
 export default function Register() {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
@@ -28,28 +27,24 @@ export default function Register() {
   const regexPhone = /^\+?[1-9]\d{1,14}$/;
   let validationSchema = Yup.object({
     name: Yup.string()
-      .min(3, "Name minLength is 3")
-      .max(10, "Name maxLength is 10")
+      .min(3, "Your name must be at least 3 characters")
+      .max(30, "Your name can't exceed 30 characters")
       .required("Name is Required"),
-
     email: Yup.string()
       .matches(
         regexEmail,
         "Invalid email address. Please enter a valid email address,  example@gmail.com"
       )
       .required("Email Is Required"),
-
     phone: Yup.string()
-      .matches(regexPhone, "Invalid Phone Number, ex: +20123456789")
+      .matches(regexPhone, "Invalid phone number, only egyptian numbers are allowed, ex: +20123456789")
       .required("Phone Is Required"),
-
     password: Yup.string()
       .matches(
         regexPassword,
         "Invalid password, Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character"
       )
       .required("Password Is Required"),
-
     rePassword: Yup.string()
       .oneOf([Yup.ref("password")], "Password And Re-Password Doesn't Match")
       .required("Re-Password Is Required"),
@@ -65,13 +60,12 @@ export default function Register() {
     validationSchema,
     onSubmit: submitRegister,
   });
-
   return (
     <>
-      <div className="w-50 m-auto ">
+      <div className="w-50 m-auto bg-main-light p-5 mt-4">
         <h3 className="text-center fw-bold">Register Now</h3>
         <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="name">Name :</label>
+          <label className="fw-bolder" htmlFor="name">Name </label>
           <input
             className={`form-control mb-3 ${
               formik.errors.name && formik.touched.name ? "is-invalid" : ""
@@ -90,7 +84,7 @@ export default function Register() {
           ) : (
             ""
           )}
-          <label htmlFor="email">Email :</label>
+          <label className="fw-bolder" htmlFor="email">Email </label>
           <input
             className={`form-control mb-3 ${
               formik.errors.email && formik.touched.email ? "is-invalid" : ""
@@ -109,7 +103,7 @@ export default function Register() {
           ) : (
             ""
           )}
-          <label htmlFor="password">Password :</label>
+          <label className="fw-bolder" htmlFor="password">Password </label>
           <input
             className={`form-control mb-3 ${
               formik.errors.password && formik.touched.password
@@ -130,7 +124,7 @@ export default function Register() {
           ) : (
             ""
           )}
-          <label htmlFor="rePassword">Re-Password :</label>
+          <label className="fw-bolder" htmlFor="rePassword">Re-Password </label>
           <input
             className={`form-control mb-3 ${
               formik.errors.rePassword && formik.touched.rePassword
@@ -151,7 +145,7 @@ export default function Register() {
           ) : (
             ""
           )}
-          <label htmlFor="phone">Phone :</label>
+          <label className="fw-bolder" htmlFor="phone">Phone </label>
           <input
             className={`form-control mb-3 ${
               formik.errors.phone && formik.touched.phone ? "is-invalid" : ""

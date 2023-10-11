@@ -6,7 +6,6 @@ import Spinner from "../ui/Spinner/Spinner";
 export default function Layout() {
   const { setUserToken } = useContext(UserContext);
   const { state } = useNavigation();
-
   useEffect(() => {
     if (localStorage.getItem("userToken") !== null) {
       setUserToken();

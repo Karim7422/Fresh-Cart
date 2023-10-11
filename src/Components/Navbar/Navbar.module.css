@@ -4,24 +4,19 @@
     border-radius: 5px;
     transition: all 0.3s !important;
 }
-
 a:hover {
     color: var(--main-color) !important;
 }
-
 i:hover {
     color: #000 !important;
 }
-
 .cartButton {
     position: relative;
 }
-
 .cartButton svg {
     color: #000;
     display: block;
 }
-
 .cartButton::after {
     content: attr(data-cart-items);
     position: absolute;

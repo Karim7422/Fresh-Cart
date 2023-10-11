@@ -3,7 +3,6 @@ import CartItem from "./CartItem";
 import { CartContext } from "../../context/CartContext";
 import Spinner from "../ui/Spinner/Spinner";
 import Button from "../ui/Button/Button";
-
 export default function Cart() {
   const { cart, getUserCart, resetCart } = useContext(CartContext);
   const [loading, setLoading] = useState(false);

@@ -6,11 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import { UserContext } from "../../../../context/UserContext";
 import Button from "../../../ui/Button/Button";
-
 export default function Login() {
-  let { setUserToken } = useContext(UserContext);
-  let navigate = useNavigate();
-
+  const { setUserToken } = useContext(UserContext);
+  const navigate = useNavigate();
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   async function submitLogin(values) {
@@ -30,22 +28,21 @@ export default function Login() {
   }
   const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
   const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
-  let validationSchema = Yup.object({
+  const validationSchema = Yup.object({
     email: Yup.string()
       .matches(
         regexEmail,
         "Invalid email address. Please enter a valid email address,  example@gmail.com"
       )
       .required("Email Is Required"),
-
     password: Yup.string()
       .matches(
         regexPassword,
-        "Invalid password, Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character"
+        "Invalid password, Your password must be at least 8 characters long and contain at least one uppercase constter, one lowercase constter, one digit, and one special character"
       )
       .required("Password Is Required"),
   });
-  let formik = useFormik({
+  const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
@@ -53,13 +50,12 @@ export default function Login() {
     validationSchema,
     onSubmit: submitLogin,
   });
-
   return (
     <>
-      <div className="w-50 m-auto ">
+      <div className="w-50 m-auto bg-main-light p-5 mt-4 ">
         <h3 className="text-center fw-bold">Login</h3>
         <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="email">Email :</label>
+          <label className="fw-bold" htmlFor="email">Email </label>
           <input
             className={`form-control mb-3  ${formik.errors.email && formik.touched.email ? "is-invalid" : ""
               } `}
@@ -77,7 +73,7 @@ export default function Login() {
           ) : (
             ""
           )}
-          <label htmlFor="password">Password :</label>
+          <label className="fw-bold" htmlFor="password">Password </label>
           <input
             className={`form-control mb-3 ${formik.errors.password && formik.touched.password
                 ? "is-invalid"
@@ -97,7 +93,6 @@ export default function Login() {
           ) : (
             ""
           )}
-
           <div>
             {isLoading ? (
               <div className="d-flex flex-column">
@@ -131,15 +126,13 @@ export default function Login() {
                 >
                   Login
                 </Button>
-                <div className="d-flex align-items-center justify-content-center flex-column gap-2 mt-3">
-                 
+                <div className="d-flex align-items-center justify-content-center flex-column gap-2 mt-3">                
                     <Link
                       to="/forget-password"
                       className=" text-main fw-semibold text-decoration-none"
                     >
                       Forgot Your Password?
-                    </Link>
-                 
+                    </Link>                 
                   <div>
                     <span className="fw-semibold">Don't have an account? </span>
                     <Link

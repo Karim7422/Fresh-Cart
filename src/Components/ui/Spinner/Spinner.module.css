@@ -8,7 +8,6 @@
     z-index: 999;
     background-color:rgba(255, 255, 255, 0.475);
 }
-
 .loader {
     width: 48px;
     height: 48px;
@@ -19,7 +18,6 @@
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
 }
-
 .loader::after {
     content: '';
     box-sizing: border-box;
@@ -33,12 +31,10 @@
     border-bottom: 4px solid transparent;
     animation: rotation 0.5s linear infinite reverse;
 }
-
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
