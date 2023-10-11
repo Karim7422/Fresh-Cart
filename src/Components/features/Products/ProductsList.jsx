@@ -20,7 +20,7 @@ export default function ProductsList({ products }) {
         },
       });
     }else{
-      toast.error("You Must Login First", {
+      toast.error("You Must Login First To Add To Cart", {
         style: {
           boxShadow: "0 0 0 1px  red",
           fontWeight: "bolder",
@@ -41,11 +41,12 @@ export default function ProductsList({ products }) {
         },
       });
     }else{
-      toast.error("You Must Login First", {
+      toast.error("You Must Login First To Add To Wishlist", {
         style: {
           boxShadow: "0 0 0 1px  red",
           fontWeight: "bolder",
           color: "red",
+          fontSize:"0.9rem"
         },
       });
     }
